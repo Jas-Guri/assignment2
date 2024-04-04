@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Food - A&W</title>
+<link rel="stylesheet" href="main1.css"> <!-- Include your CSS file here -->
+<style>
+  /* Additional inline styles for demonstration purposes */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5b432;
+    color: #333;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    max-height: 40px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #007bff;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .order-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+  
+  .order-item h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .order-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .order-item select {
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .order-item button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .order-item button:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    background-color:  #333;
+    padding: 20px;
+  }
+  
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer nav ul li {
+    margin-right: 10px;
+  }
+  
+  footer nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  footer nav ul li a:hover {
+    color: #007bff;
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <img src="download.jpeg" alt="A&W Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="customize_order.php">Menu</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="giftcards.html">Gift Cards</a></li>
+      <li><a href="order.html">Order Now</a></li> <!-- Link to the order page -->
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <h1>Order Food</h1>
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <div class="order-item">
+        <h2>Classic Burger</h2>
+        <img src="1.jpeg" alt="Classic Burger">
+        <p>A juicy beef patty topped with fresh lettuce, tomatoes, onions, pickles, and our special sauce, served on a toasted bun.</p>
+        <select name="ClassicBurger">
+          <option value="0">Quantity: 0</option>
+          <option value="1">Quantity: 1</option>
+          <option value="2">Quantity: 2</option>
+          <option value="3">Quantity: 3</option>
+          <option value="4">Quantity: 4</option>
+        </select>
+      </div>
+      <div class="order-item">
+        <h2>Fries</h2>
+        <img src="2.jpeg" alt="Fries">
+        <p>Crispy golden fries seasoned to perfection.</p>
+        <select name="Fries">
+          <option value="0">Quantity: 0</option>
+          <option value="1">Quantity: 1</option>
+          <option value="2">Quantity: 2</option>
+          <option value="3">Quantity: 3</option>
+          <option value="4">Quantity: 4</option>
+        </select>
+      </div>
+      <div class="order-item">
+        <h2>Onion Rings</h2>
+        <img src="3.jpeg" alt="Onion Rings">
+        <p>Crunchy, battered onion rings served hot and crispy.</p>
+        <select name="OnionRings">
+          <option value="0">Quantity: 0</option>
+          <option value="1">Quantity: 1</option>
+          <option value="2">Quantity: 2</option>
+          <option value="3">Quantity: 3</option>
+          <option value="4">Quantity: 4</option>
+        </select>
+      </div>
+      <div class="order-item">
+        <h2>Soda</h2>
+        <img src="4.jpeg" alt="Soda">
+        <p>Refreshing soda available in various flavors.</p>
+        <select name="Soda">
+          <option value="0">Quantity: 0</option>
+          <option value="1">Quantity: 1</option>
+          <option value="2">Quantity: 2</option>
+          <option value="3">Quantity: 3</option>
+          <option value="4">Quantity: 4</option>
+        </select>
+      </div>
+      <!-- Add more order items as needed -->
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="form_elements.html">Menu</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html
